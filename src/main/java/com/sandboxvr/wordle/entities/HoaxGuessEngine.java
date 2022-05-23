@@ -1,5 +1,6 @@
 package com.sandboxvr.wordle.entities;
 
+import com.sandboxvr.wordle.exceptions.EmptyAnswerException;
 import com.sandboxvr.wordle.exceptions.UnknownWordException;
 
 import java.util.ArrayList;
@@ -16,11 +17,14 @@ public class HoaxGuessEngine implements GuessEngine {
     private List<String> worstAnswers;
     private int guessCount = 0;
 
-    public HoaxGuessEngine(String answers, int wordLen, int maxGuess) {
+    public HoaxGuessEngine(String answers, int wordLen, int maxGuess) throws EmptyAnswerException {
         this.WORD_LENGTH = wordLen;
         this.MAX_GUESS = maxGuess;
         this.allAnswers = Arrays.asList(answers.toUpperCase().split(","));
         this.worstAnswers = this.allAnswers;
+        if (answers == "" || allAnswers.get(0) == "") {
+            throw new EmptyAnswerException();
+        }
     }
 
     public void guessWord(String word) throws UnknownWordException {

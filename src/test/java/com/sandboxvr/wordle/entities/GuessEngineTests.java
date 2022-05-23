@@ -1,5 +1,6 @@
 package com.sandboxvr.wordle.entities;
 
+import com.sandboxvr.wordle.exceptions.EmptyAnswerException;
 import com.sandboxvr.wordle.exceptions.UnknownWordException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -16,7 +17,7 @@ class GuessEngineTests {
     private HoaxGuessEngine guessEngineWithMultiAnswers;
 
     @BeforeEach
-    void setup(){
+    void setup() throws EmptyAnswerException {
         guessEngineWithSingleAnswer = new HoaxGuessEngine(SINGLE_ANSWER, 5, 6);
         guessEngineWithMultiAnswers = new HoaxGuessEngine(ANSWERS, 5, 6);
     }
