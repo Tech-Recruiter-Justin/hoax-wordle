@@ -1,8 +1,8 @@
-#Hoax Wordle
+# Hoax Wordle
 
-##Preparation
+## Preparation
 
-###The JAR
+### The JAR
 1. Install Java 17 or above
 2. Download the JAR (hoax-0.0.1-SNAPSHOT.jar in the root project folder) OR
 3. build it by yourself (optional)
@@ -41,13 +41,13 @@ $ ./mvnw clean package
 
 ```
 
-###Word txt
+### Word txt
 - You may name the txt file as you like, as long as the path you provide is correct when running the application (explained in the next section)
 - Two samples are already provided to you in this repo under /hoax/src/main/resources, long.txt and word.txt - you may change the content as you see fit
 
-##How to run
+## How to run
 
-###Through Command Line
+### Through Command Line
 
 ```
 $ java -jar /your/folder/path/target/hoax-0.0.1-SNAPSHOT.jar /absolute/path/to/answers.txt "\n" 5 6
@@ -65,7 +65,7 @@ ARGS[2] the length of words in the game, normally this is set to 5 (like the rea
 ARGS[3] the maximum guesses allowed before the game ends
 ```
 
-###Through IDE
+### Through IDE
 1. Import the project folder to your preferred IDE i.e. IntelliJ IDEA
 2. Import all the Maven dependencies
 3. Build and run the application directly from your IDE tools (remember to input the application arguements)
