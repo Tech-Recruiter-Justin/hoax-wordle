@@ -1,5 +1,27 @@
 # Hoax Wordle
 
+## Introduction
+This is a Wordle-like game, but NOT a normal Wordle. It will try to deceive the player, making them spend more time guessing the “correct” word. The programme has a list of words but DOES NOT have a target answer in the beginning. Everytime the player guesses a word, the program will try to give a bad answer to the player. A bad answer means it contains as few correction positions as possible, or as few correct letters as possible. Check the examples below for better understanding.
+
+## Specification
+- The program will read a text file (e.g. words.txt), containing some number of lines. Each
+line is a 5-letter word.
+- After reading the text file, the program will start the game, just like a normal wordle.
+- The player will enter 5 letters each time, and the program will validate if the input is in the
+list of words.
+  - If the word is not in the list, “Unknown word” will be printed.
+- The program will print different letters based on user’s input:
+  - ‘X’ means Hit (letter is in the target word, and correct position)
+  - ‘?’ means Near hit (letter is in the target word, but not in correct position)
+  - ‘_’ means Miss (letter is not in the target word).
+- The program will maintain a list of candidate of answer, while trying to provide the worst possible answer with follow priority:
+  - Less “Hit” is better. 
+  - If they have the same number of “Hit”, less “Near hit” is better.
+- After the player guesses the whole word correctly, the program will print the number of
+times they tried.
+- If the player cannot guess it in 6 rounds, “The correct word is XXXXX” will be
+printed. XXXXX is the finalized answer. If the program at that stage has more than 1 word, any of them is OK.
+
 ## Preparation
 
 ### The JAR
