@@ -80,7 +80,9 @@ $ ./mvnw clean package
 ### Through Command Line
 
 ```
-$ java -jar /your/folder/path/target/hoax-0.0.1-SNAPSHOT.jar /absolute/path/to/answers.txt "\n" 5 6
+* replace /path/to/jar/ with the path where you store the jar
+* replace /path/to/answers.txt with the path where you store the txt files and change the file name accordingly
+$ java -jar /path/to/jar/hoax-0.0.1-SNAPSHOT.jar /path/to/answers.txt "\n" 5 6
 
 ###### ARGS EXPLANATION ######
 

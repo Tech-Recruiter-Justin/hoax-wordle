@@ -24,7 +24,7 @@ public class TxtAnswerReader {
         while(scanner.hasNext()) {
             String nextLine = scanner.nextLine();
             if (!nextLine.trim().matches("[a-zA-Z]{" + wordLen +"}")) {
-                throw new InputMismatchException("Answers in TXT file must only contain a-z A-Z characters and be 5 characters long. Check line " + line + "." );
+                throw new InputMismatchException("Answers in TXT file must only contain a-z A-Z characters and be " + wordLen + " characters long. Check line " + line + "." );
             }
             sb.append(nextLine);
             sb.append(",");
